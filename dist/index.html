@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+    <body ng-app="TempApp">
+
+    <div ng-controller="AppCtrl" ng-cloak>
+          <md-content>
+            <md-icon> alarm </md-icon>
+
+            <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+              Custom Dialog
+            </md-button>
+
+            {{ status }}
+
+            
+          </md-content>
+        </div>
+    <script src="js/angular-full.min.js"></script>
+
+    <script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+    <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    <!--endbuild-->
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+    <body ng-app="TempApp">
+
+    <div ng-controller="AppCtrl" ng-cloak>
+          <md-content>
+            <md-icon> alarm </md-icon>
+
+            <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+              Custom Dialog
+            </md-button>
+
+            {{ status }}
+
+            <table>
+                <tr ng-repeat="row in data.table1" ng-click="chooseRow(row, 'table1')">
+                    <td>
+                        {{ row.name }}
+                    </td>
+                    <td>
+                        {{ row.param1 }}
+                    </td>
+                    <td>
+                        {{ row.param2 }}
+                    </td>
+                    <td>
+                        {{ row.param3 }}
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr ng-repeat="row in data.table2"  ng-click="chooseRow(row, 'table2')">
+                    <td>
+                        {{ row.name }}
+                    </td>
+                    <td>
+                        {{ row.param1 }}
+                    </td>
+                    <td>
+                        {{ row.param2 }}
+                    </td>
+                    <td>
+                        {{ row.param3 }}
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+
+            {{result.table1.name}}
+            <br />
+            {{result.table2.name}}
+          </md-content>
+
+        </div>
+    
+
+    <script type="text/javascript" src="vendor.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
